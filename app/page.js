@@ -61,7 +61,6 @@ export default function Home() {
             <h2 className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">Links</h2>
             <ul className="space-y-1">
               <li><a href="https://github.com/canrollas" target="_blank" className="text-slate-600 hover:text-slate-900 underline underline-offset-2">GitHub</a></li>
-              <li><a href="https://www.kitapquest.com" target="_blank" className="text-slate-600 hover:text-slate-900 underline underline-offset-2">KitapQuest</a></li>
             </ul>
           </div>
 
@@ -101,7 +100,7 @@ export default function Home() {
                   <ul className="mt-1 list-disc list-inside text-slate-500 space-y-0.5 pl-1">
                     <li>Thesis: <em>Mask-Conditioned Dermoscopic Image Synthesis via Latent Diffusion Models</em></li>
                     <li>Advisor: Prof. Dr. Yalın Baştanlar</li>
-                    <li>GPA: 3.0 / 4.0</li>
+                    <li>GPA: 3.08 / 4.0</li>
                   </ul>
                 </div>
                 <div className="text-slate-400 whitespace-nowrap text-right">Jul. 2024 – Present<br /><span className="text-xs">İzmir, Türkiye</span></div>
@@ -192,12 +191,36 @@ export default function Home() {
             <SectionTitle>Selected Projects</SectionTitle>
             <div className="mt-3 space-y-4">
               <ProjectRow
-                title="RollasBack – Python Backend Framework"
-                tags="Python · Socket Programming"
-                year="2024 – Present"
-                href="https://github.com/CodeWikiOrg/RollAsBack/tree/main"
+                title="Mask2Derm"
+                tags="Diffusion Models · ControlNet · PyTorch"
+                year="2025"
+                href="https://github.com/canrollas/Mask2DermRepo"
               >
-                Lightweight RESTful Python framework built from scratch over raw HTTP sockets; analogous to Flask/Django at a lower abstraction level.
+                Initial implementation repository for the Mask2Derm article. ControlNet-based latent diffusion model conditioned on lesion masks for dermoscopic image synthesis.
+              </ProjectRow>
+              <ProjectRow
+                title="BerryRoll"
+                tags="Python · Agents · LLM"
+                year="2025"
+                href="https://github.com/canrollas/BerryRoll"
+              >
+                Data-driven discovery agent for hypothesis testing.
+              </ProjectRow>
+              <ProjectRow
+                title="SoreSAM"
+                tags="Python · Segmentation"
+                year="2025"
+                href="https://github.com/canrollas/SoreSAM"
+              >
+                Wound segmentation using SAM (Segment Anything Model).
+              </ProjectRow>
+              <ProjectRow
+                title="Multi-Agent Systems — CENG 568"
+                tags="Python · Multi-Agent Systems"
+                year="2025"
+                href="https://github.com/canrollas/mas-project"
+              >
+                Course project for CENG 568: Multi Agent Systems.
               </ProjectRow>
               <ProjectRow
                 title="ML-Assisted Melanoma Diagnosis System"
@@ -217,20 +240,20 @@ export default function Home() {
                 Binary semantic segmentation of mitochondria in grayscale microscopy images; 99.4% validation accuracy, Mean IoU ≈ 0.75.
               </ProjectRow>
               <ProjectRow
+                title="RollasBack – Python Backend Framework"
+                tags="Python · Socket Programming"
+                year="2024 – Present"
+                href="https://github.com/CodeWikiOrg/RollAsBack/tree/main"
+              >
+                Lightweight RESTful Python framework built from scratch over raw HTTP sockets; analogous to Flask/Django at a lower abstraction level.
+              </ProjectRow>
+              <ProjectRow
                 title="Turkish License Plate Recognition"
                 tags="YOLOv5 · OCR"
                 year="2023"
                 href="https://github.com/canrollas/Turkish_LPR"
               >
                 Real-time vehicle detection and Turkish license plate recognition system using YOLOv5 and OCR pipelines.
-              </ProjectRow>
-              <ProjectRow
-                title="KitapQuest"
-                tags="Web App · AI · Recommendation System"
-                year=""
-                href="https://www.kitapquest.com"
-              >
-                Social reading platform with AI-driven book recommendations, map-inspired community features, and chatbot integration.
               </ProjectRow>
             </div>
           </section>
