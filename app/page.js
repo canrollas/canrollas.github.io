@@ -11,10 +11,10 @@ export default function Home() {
             Can Rollas
           </h1>
           <p className="mt-1 text-base text-slate-600">
-            Machine Learning Engineer &nbsp;·&nbsp; MSc Researcher, Computer Vision
+            MSc Researcher, Computer Vision
           </p>
           <p className="mt-0.5 text-sm text-slate-500">
-            Amatis &nbsp;|&nbsp; Izmir Institute of Technology (IZTECH) &nbsp;|&nbsp; İzmir, Türkiye
+            Izmir Institute of Technology (IZTECH) &nbsp;|&nbsp; İzmir, Türkiye
           </p>
           <div className="mt-3 flex flex-wrap gap-4 text-sm">
             <a href="mailto:canrollas@gmail.com" className="text-slate-600 hover:text-slate-900 underline underline-offset-2">
@@ -81,11 +81,11 @@ export default function Home() {
           {/* About */}
           <section id="about">
             <p className="text-slate-700">
-              I am a Machine Learning Engineer at Amatis, where I develop deep learning models for medical imaging
-              (melanoma &amp; wound detection, ECG signal analysis) and deploy backend services on Azure.
-              Concurrently, I am pursuing an MSc in Computer Science at IZTECH under the supervision of
+              I am currently pursuing an MSc in Computer Science at IZTECH under the supervision of
               Prof. Dr. Yalın Baştanlar, with my thesis focusing on mask-conditioned dermoscopic image synthesis
-              via latent diffusion models. My research and engineering work spans generative models,
+              via latent diffusion models. Previously, I worked as a Machine Learning Engineer at Amatis,
+              developing deep learning models for medical imaging (melanoma &amp; wound detection, ECG signal analysis)
+              and deploying backend services on Azure. My research and engineering work spans generative models,
               semantic segmentation, object detection, NLP, and cloud architecture.
             </p>
           </section>
@@ -239,13 +239,10 @@ export default function Home() {
           <section id="skills">
             <SectionTitle>Technical Skills</SectionTitle>
             <div className="mt-3 space-y-1.5 text-slate-700">
-              <SkillRow label="Languages">Python, JavaScript, Bash/Shell, SQL</SkillRow>
-              <SkillRow label="ML / DL">PyTorch, TensorFlow/Keras, Scikit-learn, OpenCV, Hugging Face Transformers</SkillRow>
-              <SkillRow label="Computer Vision">Image Segmentation, Object Detection, GANs, Diffusion Models, Grad-CAM, YOLOv5</SkillRow>
-              <SkillRow label="NLP">BERT, Transformers, Sentiment Analysis, Topic Modeling, LLM Integration</SkillRow>
-              <SkillRow label="Cloud & DevOps">AWS (Lambda, API Gateway, S3, Cognito), Azure, Docker, Kubernetes, Jenkins, CI/CD</SkillRow>
-              <SkillRow label="Mobile & Frontend">React Native, Mapbox, REST APIs</SkillRow>
-              <SkillRow label="Tools">Git, Jira, Confluence, Linux, Jupyter Notebooks</SkillRow>
+              <SkillRow label="ML & Deep Learning">PyTorch, TensorFlow/Keras, Scikit-learn, Hugging Face Transformers</SkillRow>
+              <SkillRow label="Computer Vision">Diffusion Models, ControlNet, Semantic Segmentation, Object Detection, Grad-CAM, YOLOv5, OpenCV</SkillRow>
+              <SkillRow label="NLP & LLMs">BERT, Transformers, Sentiment Analysis, Topic Modeling, LLM Integration</SkillRow>
+              <SkillRow label="Cloud & Deployment">AWS, Azure, Docker, Kubernetes</SkillRow>
             </div>
           </section>
 
