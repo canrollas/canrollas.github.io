@@ -81,8 +81,7 @@ export default function Home() {
           <section id="about">
             <p className="text-slate-700">
               I am currently pursuing an MSc in Computer Science at IZTECH under the supervision of
-              Prof. Dr. Yalın Baştanlar, with my thesis focusing on mask-conditioned dermoscopic image synthesis
-              via latent diffusion models. Previously, I worked as a Machine Learning Engineer at Amatis,
+              Prof. Dr. Yalın Baştanlar, with my thesis focusing on AI-assisted diabetic and surgical wound analysis. Previously, I worked as a Machine Learning Engineer at Amatis,
               developing deep learning models for medical imaging (melanoma &amp; wound detection, ECG signal analysis)
               and deploying backend services on Azure. My research and engineering work spans generative models,
               semantic segmentation, object detection, NLP, and cloud architecture.
@@ -98,7 +97,7 @@ export default function Home() {
                   <div className="font-medium">Izmir Institute of Technology (IZTECH)</div>
                   <div className="text-slate-600 italic">M.Sc. Computer Science — Computer Vision</div>
                   <ul className="mt-1 list-disc list-inside text-slate-500 space-y-0.5 pl-1">
-                    <li>Thesis: <em>Mask-Conditioned Dermoscopic Image Synthesis via Latent Diffusion Models</em></li>
+                    <li>Thesis: <em>AI-Assisted Diabetic and Surgical Wound Analysis</em></li>
                     <li>Advisor: Prof. Dr. Yalın Baştanlar</li>
                     <li>GPA: 3.08 / 4.0</li>
                   </ul>
@@ -207,7 +206,7 @@ export default function Home() {
                 Data-driven discovery agent for hypothesis testing.
               </ProjectRow>
               <ProjectRow
-                title="SoreSAM"
+                title="AI-Assisted Diabetic and Surgical Wound Analysis"
                 tags="Python · Segmentation"
                 year="2025"
                 href="https://github.com/canrollas/SoreSAM"
