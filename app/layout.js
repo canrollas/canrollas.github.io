@@ -1,10 +1,16 @@
 import localFont from "next/font/local";
-import { Inter } from "next/font/google";
+import { Inter, Lora } from "next/font/google";
 import "./globals.css";
 
 const inter = Inter({
     subsets: ["latin"],
     variable: "--font-inter",
+});
+
+const lora = Lora({
+    subsets: ["latin"],
+    variable: "--font-lora",
+    weight: ["400", "500", "600", "700"],
 });
 
 const geistSans = localFont({
@@ -19,15 +25,15 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-    title: "Can Rollas - Software Developer & Deep Learning Researcher",
-    description: "Academic one-page CV and portfolio of Can Rollas (AI, Computer Vision, AWS Cloud, Software Engineering).",
+    title: "Can Rollas — ML Engineer & Computer Vision Researcher",
+    description: "Academic page of Can Rollas. Machine Learning Engineer at Amatis, MSc researcher at IZTECH. Research: Medical Image Synthesis, Diffusion Models, Computer Vision.",
 };
 
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
         <body
-            className={`${inter.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
+            className={`${inter.variable} ${lora.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
         >
         {children}
         </body>

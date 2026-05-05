@@ -1,274 +1,295 @@
 'use client';
- 
 
 export default function Home() {
   return (
-    <div className="bg-slate-50 text-slate-900">
-      {/* Header */}
-      <header className="hidden sm:block sm:sticky sm:top-0 sm:z-40 sm:backdrop-blur sm:bg-white/70 sm:border-b sm:border-slate-200">
-        <nav className="mx-auto max-w-4xl px-4 py-3 flex items-center gap-4 text-sm text-slate-700">
-          <a href="#about" className="hover:text-slate-900">About</a>
-          <a href="#education" className="hover:text-slate-900">Education</a>
-          <a href="#experience" className="hover:text-slate-900">Experience</a>
-          <a href="#projects" className="hover:text-slate-900">Projects</a>
-          <a href="#publications" className="hover:text-slate-900">Publications</a>
-          <a href="#skills" className="hover:text-slate-900">Skills</a>
-          <a href="#contact" className="ml-auto inline-flex items-center gap-2 rounded-xl border px-3 py-1.5 hover:bg-slate-100">Contact</a>
-        </nav>
+    <div className="bg-white text-slate-900 font-[family-name:var(--font-inter)]">
+
+      {/* ── Top Header ── */}
+      <header className="border-b border-slate-200 bg-white">
+        <div className="mx-auto max-w-5xl px-6 py-8">
+          <h1 className="text-4xl font-semibold tracking-tight font-[family-name:var(--font-lora)]">
+            Can Rollas
+          </h1>
+          <p className="mt-1 text-base text-slate-600">
+            Machine Learning Engineer &nbsp;·&nbsp; MSc Researcher, Computer Vision
+          </p>
+          <p className="mt-0.5 text-sm text-slate-500">
+            Amatis &nbsp;|&nbsp; Izmir Institute of Technology (IZTECH) &nbsp;|&nbsp; İzmir, Türkiye
+          </p>
+          <div className="mt-3 flex flex-wrap gap-4 text-sm">
+            <a href="mailto:canrollas@gmail.com" className="text-slate-600 hover:text-slate-900 underline underline-offset-2">
+              canrollas@gmail.com
+            </a>
+            <a href="https://github.com/canrollas" target="_blank" className="text-slate-600 hover:text-slate-900 underline underline-offset-2">
+              github.com/canrollas
+            </a>
+          </div>
+        </div>
       </header>
 
-      <main className="mx-auto max-w-4xl px-4 py-8">
-        {/* About Section */}
-        <section id="about" className="bg-white rounded-3xl shadow-sm border border-slate-200 p-6">
-          <div className="flex flex-col sm:flex-row sm:items-center gap-6">
-            <div className="grow">
-              <h1 className="text-3xl font-semibold tracking-tight">Can Rollas</h1>
-              <p className="mt-1 text-slate-600">Software Developer & Deep Learning Researcher</p>
-              <p className="mt-3 text-sm text-slate-700 leading-relaxed">
-                I am currently focused on my own projects and academic pursuits. Previously, I worked as a Software Developer at Sovrox-MLBNova, 
-                leading the development of Farmavil - a cross-platform smart farming application. I am pursuing my MSc in Computer Science 
-                at IZTECH with a focus on Computer Vision. I specialize in AI & Computer Vision, AWS Cloud Architecture, 
-                and full-stack development with expertise in React Native, Python, and DevOps.
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                <a className="inline-flex items-center gap-2 rounded-xl bg-slate-900 text-white px-3 py-1.5 text-sm hover:bg-slate-800" href="mailto:canrollas@gmail.com">Get in Touch</a>
-                <a className="inline-flex items-center gap-2 rounded-xl border px-3 py-1.5 text-sm hover:bg-slate-100" href="#projects">Projects</a>
-                <a className="inline-flex items-center gap-2 rounded-xl border px-3 py-1.5 text-sm hover:bg-slate-100" href="https://github.com/canrollas" target="_blank">GitHub</a>
+      {/* ── Body: sidebar + main ── */}
+      <div className="mx-auto max-w-5xl px-6 py-8 flex flex-col lg:flex-row gap-10">
+
+        {/* ── LEFT SIDEBAR ── */}
+        <aside className="lg:w-56 shrink-0 space-y-8 text-sm">
+
+          {/* Research Interests */}
+          <div>
+            <h2 className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">Research Interests</h2>
+            <ul className="space-y-1 text-slate-700 leading-snug">
+              <li>Generative Models</li>
+              <li>Latent Diffusion &amp; ControlNet</li>
+              <li>Medical Image Synthesis</li>
+              <li>Semantic Segmentation</li>
+              <li>Object Detection</li>
+              <li>LLM Integration</li>
+            </ul>
+          </div>
+
+          {/* Languages */}
+          <div>
+            <h2 className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">Languages</h2>
+            <ul className="space-y-1 text-slate-700">
+              <li>Turkish <span className="text-slate-400">— Native</span></li>
+              <li>English <span className="text-slate-400">— B2</span></li>
+              <li>German <span className="text-slate-400">— B1</span></li>
+            </ul>
+          </div>
+
+          {/* Links */}
+          <div>
+            <h2 className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">Links</h2>
+            <ul className="space-y-1">
+              <li><a href="https://github.com/canrollas" target="_blank" className="text-slate-600 hover:text-slate-900 underline underline-offset-2">GitHub</a></li>
+              <li><a href="https://www.kitapquest.com" target="_blank" className="text-slate-600 hover:text-slate-900 underline underline-offset-2">KitapQuest</a></li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h2 className="text-xs font-semibold uppercase tracking-widest text-slate-400 mb-2">Contact</h2>
+            <a href="mailto:canrollas@gmail.com" className="text-slate-600 hover:text-slate-900 underline underline-offset-2 break-all">
+              canrollas@gmail.com
+            </a>
+          </div>
+
+        </aside>
+
+        {/* ── MAIN CONTENT ── */}
+        <main className="flex-1 min-w-0 space-y-10 text-sm leading-relaxed">
+
+          {/* About */}
+          <section id="about">
+            <p className="text-slate-700">
+              I am a Machine Learning Engineer at Amatis, where I develop deep learning models for medical imaging
+              (melanoma &amp; wound detection, ECG signal analysis) and deploy backend services on Azure.
+              Concurrently, I am pursuing an MSc in Computer Science at IZTECH under the supervision of
+              Prof. Dr. Yalın Baştanlar, with my thesis focusing on mask-conditioned dermoscopic image synthesis
+              via latent diffusion models. My research and engineering work spans generative models,
+              semantic segmentation, object detection, NLP, and cloud architecture.
+            </p>
+          </section>
+
+          {/* Education */}
+          <section id="education">
+            <SectionTitle>Education</SectionTitle>
+            <div className="space-y-5 mt-3">
+              <div className="flex justify-between gap-6">
+                <div>
+                  <div className="font-medium">Izmir Institute of Technology (IZTECH)</div>
+                  <div className="text-slate-600 italic">M.Sc. Computer Science — Computer Vision</div>
+                  <ul className="mt-1 list-disc list-inside text-slate-500 space-y-0.5 pl-1">
+                    <li>Thesis: <em>Mask-Conditioned Dermoscopic Image Synthesis via Latent Diffusion Models</em></li>
+                    <li>Advisor: Prof. Dr. Yalın Baştanlar</li>
+                    <li>GPA: 3.0 / 4.0</li>
+                  </ul>
+                </div>
+                <div className="text-slate-400 whitespace-nowrap text-right">Jul. 2024 – Present<br /><span className="text-xs">İzmir, Türkiye</span></div>
+              </div>
+              <div className="flex justify-between gap-6">
+                <div>
+                  <div className="font-medium">Izmir Institute of Technology (IZTECH)</div>
+                  <div className="text-slate-600 italic">B.Sc. Computer Engineering</div>
+                  <ul className="mt-1 list-disc list-inside text-slate-500 space-y-0.5 pl-1">
+                    <li>Thesis: <em>"Remote Tracking of Agricultural Fields"</em></li>
+                    <li>GPA: 3.0 / 4.0</li>
+                  </ul>
+                </div>
+                <div className="text-slate-400 whitespace-nowrap text-right">Jan. 2018 – Jun. 2024<br /><span className="text-xs">İzmir, Türkiye</span></div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Education */}
-        <section id="education" className="mt-6 bg-white rounded-3xl shadow-sm border border-slate-200 p-6">
-          <h2 className="text-xl font-semibold">Education</h2>
-          <ul className="mt-4 space-y-4">
-            <li className="flex items-start justify-between gap-8">
-              <div>
-                <div className="font-medium text-base">MSc, Computer Science</div>
-                <div className="text-sm text-slate-600">Izmir Institute of Technology (IZTECH)</div>
-                <div className="mt-1 text-xs text-slate-500 flex flex-col gap-1">
-                  <span>GPA: 3.0 / 4.0</span>
-                  <span>Thesis: <span className="italic">Computer Vision thesis with advisor Prof. Dr. Yalın Baştanlar</span></span>
+          {/* Experience */}
+          <section id="experience">
+            <SectionTitle>Work Experience</SectionTitle>
+            <div className="space-y-5 mt-3">
+              <div className="flex justify-between gap-6">
+                <div>
+                  <div className="font-medium">Machine Learning Engineer</div>
+                  <div className="text-slate-600 italic">Amatis</div>
+                  <ul className="mt-1 list-disc list-inside text-slate-500 space-y-0.5 pl-1">
+                    <li>Developed deep learning models for melanoma and wound detection (segmentation &amp; classification) and ECG signal analysis</li>
+                    <li>Built a medical chatbot capable of processing patient data to assist clinicians with information retrieval</li>
+                    <li>Deployed models and backend services on Azure</li>
+                  </ul>
                 </div>
+                <div className="text-slate-400 whitespace-nowrap text-right">Aug. 2025 – May 2026<br /><span className="text-xs">İzmir, Türkiye</span></div>
               </div>
-              <div className="text-sm text-slate-500 whitespace-nowrap">07/2024 – Present</div>
-            </li>
-            <li className="flex items-start justify-between gap-8">
-              <div>
-                <div className="font-medium text-base">BSc, Computer Engineering</div>
-                <div className="text-sm text-slate-600">Izmir Institute of Technology (IZTECH)</div>
-                <div className="mt-1 text-xs text-slate-500 flex flex-col gap-1">
-                  <span>GPA: 3.0 / 4.0</span>
-                  <span>Thesis: <span className="italic">"Remote Tracking of Agricultural Fields"</span></span>
+              <div className="flex justify-between gap-6">
+                <div>
+                  <div className="font-medium">Software Developer</div>
+                  <div className="text-slate-600 italic">Sovrox – MLBNova (Farmavil)</div>
+                  <ul className="mt-1 list-disc list-inside text-slate-500 space-y-0.5 pl-1">
+                    <li>Developed a remote field tracking application with satellite-based NDVI analytics, real-time weather integration, and AI-powered plant disease detection</li>
+                    <li>Built and maintained AWS-based backend infrastructure (Lambda, API Gateway, S3) and a cross-platform React Native mobile app</li>
+                    <li>Integrated an LLM-based chatbot for agricultural Q&amp;A within the platform</li>
+                  </ul>
                 </div>
+                <div className="text-slate-400 whitespace-nowrap text-right">Jun. 2022 – Jun. 2025<br /><span className="text-xs">İzmir, Türkiye</span></div>
               </div>
-              <div className="text-sm text-slate-500 whitespace-nowrap">01/2018 – 24/06/2024</div>
-            </li>
-          </ul>
-        </section>
-
-        {/* Experience */}
-        <section id="experience" className="mt-6 bg-white rounded-3xl shadow-sm border border-slate-200 p-6">
-          <h2 className="text-xl font-semibold">Experience</h2>
-          <ul className="mt-4 space-y-3">
-            <li className="flex items-start justify-between gap-8">
-              <div>
-                <div className="font-medium text-base">Software Developer</div>
-                <div className="text-sm text-slate-600">Sovrox - MLBNova</div>
-                <ul className="mt-1 text-xs text-slate-500 list-disc list-inside space-y-0.5 pl-1">
-                  <li>Led the development of Farmavil smart farming application</li>
-                  <li>Implemented AI-powered plant disease detection, NDVI satellite analytics, and real-time weather layers</li>
-                  <li>Designed AWS-based serverless microservices architecture</li>
-                  <li>Developed cross-platform React Native application</li>
-                  <li>Integrated LLM-based customer chatbot</li>
-                </ul>
+              <div className="flex justify-between gap-6">
+                <div>
+                  <div className="font-medium">Software Developer</div>
+                  <div className="text-slate-600 italic">Somera</div>
+                  <ul className="mt-1 list-disc list-inside text-slate-500 space-y-0.5 pl-1">
+                    <li>Wrote Scrapy-based web crawlers for automated Turkish news collection and deduplication at scale</li>
+                    <li>Built NLP pipelines (BERT) for news classification, sentiment analysis, and summarization for enterprise clients</li>
+                  </ul>
+                </div>
+                <div className="text-slate-400 whitespace-nowrap text-right">Jun. 2021 – Jul. 2022<br /><span className="text-xs">İzmir, Türkiye</span></div>
               </div>
-              <div className="text-sm text-slate-500 whitespace-nowrap">07/2022 – 06/2025</div>
-            </li>
-            <li className="flex items-start justify-between gap-8">
-              <div>
-                <div className="font-medium text-base">Software Developer</div>
-                <div className="text-sm text-slate-600">Somera</div>
-                <ul className="mt-1 text-xs text-slate-500 list-disc list-inside space-y-0.5 pl-1">
-                  <li>Developed CI/CD-driven Turkish news aggregation and analytics platform</li>
-                  <li>Built BERT-based NLP pipelines for multi-label news classification</li>
-                  <li>Implemented deep learning-based sentiment analysis and topic modeling</li>
-                  <li>Designed automated web/news data collection workflows</li>
-                </ul>
-              </div>
-              <div className="text-sm text-slate-500 whitespace-nowrap">04/2021 – 06/2022</div>
-            </li>
-          </ul>
-        </section>
+            </div>
+          </section>
 
-        {/* Projects */}
-        <section id="projects" className="mt-6 bg-white rounded-3xl shadow-sm border border-slate-200 p-6">
-          <h2 className="text-xl font-semibold">Projects</h2>
-          <div className="mt-4 grid sm:grid-cols-2 gap-4">
-            
-            <article className="rounded-2xl border p-4">
-              <div className="flex items-center justify-between">
-                <h3 className="font-medium text-base">
-                  <a href="https://github.com/CodeWikiOrg/RollAsBack/tree/main" target="_blank" className="text-blue-600 hover:underline">RollasBack</a>
-                </h3>
-                <span className="px-2 py-0.5 text-xs rounded-full bg-green-100 border text-green-700">Open-Source</span>
-              </div>
-              <p className="text-sm text-slate-700 mt-3">
-                Lightweight Python backend framework developed from scratch using low-level socket programming. 
-                Provides full RESTful API support with built-in routing and modular, extensible architecture.
-              </p>
-              <p className="text-xs text-slate-500 mt-2">Python, Socket Programming, HTTP, RESTful API</p>
-            </article>
+          {/* Publications */}
+          <section id="publications">
+            <SectionTitle>Publications</SectionTitle>
+            <ol className="mt-3 space-y-4 list-decimal list-outside pl-5 text-slate-700">
+              <li>
+                <span className="font-medium">Mask2Derm: Mask-Conditioned Dermoscopic Image Synthesis via Latent Diffusion.</span>{" "}
+                <u>Rollas, C.</u>, Güllü, M.K., Alıcı, İ.O. <em>Elsevier – Preprint</em>, 2026.{" "}
+                <span className="inline-block px-1.5 py-0.5 text-xs rounded bg-slate-100 border text-slate-500 align-middle">Preprint</span>
+                <div className="mt-1 text-xs text-slate-500">
+                  ControlNet-based latent diffusion model conditioned on lesion masks; Dice: 0.92, IoU: 0.87.
+                  TSTR benchmark: synthetic-trained model outperformed ImageNet baseline by 13.4% IoU (0.93 vs 0.79).
+                </div>
+              </li>
+              <li>
+                <span className="font-medium">Development of Open Source Terminal-Based Analog Circuit Simulator.</span>{" "}
+                Kersü, A., <u>Rollas, C.</u>, Salman, Z.D., Salam, A., Gumus, A.{" "}
+                <em>International Conference on Studies in Engineering, Science, and Technology</em>, 2023.{" "}
+                <a href="https://github.com/miralab-ai/circuit-simulator" target="_blank" className="text-slate-500 hover:text-slate-900 underline underline-offset-2 text-xs">[GitHub]</a>
+                <div className="mt-1 text-xs text-slate-500">
+                  Lightweight open-source circuit simulator for passive components validated against LTSpice.
+                </div>
+              </li>
+            </ol>
+          </section>
 
-            <article className="rounded-2xl border p-4">
-              <div className="flex items-center justify-between">
-                <h3 className="font-medium text-base">
-                  <a href="https://github.com/canrollas/Turkish_LPR" target="_blank" className="text-blue-600 hover:underline">Turkish License Plate Recognition</a>
-                </h3>
-                <span className="px-2 py-0.5 text-xs rounded-full bg-green-100 border text-green-700">Open-Source</span>
-              </div>
-              <p className="text-sm text-slate-700 mt-3">
-                Vehicle detection and OCR-based Turkish license plate recognition system using YOLOv5. 
-                Optimized inference pipeline for real-time performance.
-              </p>
-              <p className="text-xs text-slate-500 mt-2">YOLOv5, Computer Vision, OCR, Python</p>
-            </article>
+          {/* Projects */}
+          <section id="projects">
+            <SectionTitle>Selected Projects</SectionTitle>
+            <div className="mt-3 space-y-4">
+              <ProjectRow
+                title="RollasBack – Python Backend Framework"
+                tags="Python · Socket Programming"
+                year="2024 – Present"
+                href="https://github.com/CodeWikiOrg/RollAsBack/tree/main"
+              >
+                Lightweight RESTful Python framework built from scratch over raw HTTP sockets; analogous to Flask/Django at a lower abstraction level.
+              </ProjectRow>
+              <ProjectRow
+                title="ML-Assisted Melanoma Diagnosis System"
+                tags="EfficientNet · Grad-CAM · PyTorch"
+                year="2024"
+                href="https://github.com/canrollas/ML-Based-Melanoma-Diagnosis-System"
+              >
+                Fine-tuned EfficientNetB0 on ISIC dataset (~11k images); achieved 86% test accuracy (F1: 0.86).
+                Integrated Grad-CAM visualizations for clinical interpretability.
+              </ProjectRow>
+              <ProjectRow
+                title="Mitochondria Segmentation with U-Net"
+                tags="U-Net · Keras"
+                year="2024"
+                href="https://github.com/canrollas/mitochondria_segmentation_unet"
+              >
+                Binary semantic segmentation of mitochondria in grayscale microscopy images; 99.4% validation accuracy, Mean IoU ≈ 0.75.
+              </ProjectRow>
+              <ProjectRow
+                title="Turkish License Plate Recognition"
+                tags="YOLOv5 · OCR"
+                year="2023"
+                href="https://github.com/canrollas/Turkish_LPR"
+              >
+                Real-time vehicle detection and Turkish license plate recognition system using YOLOv5 and OCR pipelines.
+              </ProjectRow>
+              <ProjectRow
+                title="KitapQuest"
+                tags="Web App · AI · Recommendation System"
+                year=""
+                href="https://www.kitapquest.com"
+              >
+                Social reading platform with AI-driven book recommendations, map-inspired community features, and chatbot integration.
+              </ProjectRow>
+            </div>
+          </section>
 
-            <article className="rounded-2xl border p-4">
-              <div className="flex items-center justify-between">
-                <h3 className="font-medium text-base">
-                  <a href="https://github.com/canrollas/ML-Based-Melanoma-Diagnosis-System" target="_blank" className="text-blue-600 hover:underline">ML-Assisted Melanoma Diagnosis</a>
-                </h3>
-                <span className="px-2 py-0.5 text-xs rounded-full bg-green-100 border text-green-700">Open-Source</span>
-              </div>
-              <p className="text-sm text-slate-700 mt-3">
-                Deep learning-based medical imaging pipeline for melanoma diagnosis using ISIC dataset (~11,000 dermatoscopic images). 
-                Achieved 86% test accuracy with balanced precision and recall.
-              </p>
-              <p className="text-xs text-slate-500 mt-2">Deep Learning, EfficientNet, Medical AI, Grad-CAM</p>
-            </article>
+          {/* Skills */}
+          <section id="skills">
+            <SectionTitle>Technical Skills</SectionTitle>
+            <div className="mt-3 space-y-1.5 text-slate-700">
+              <SkillRow label="Languages">Python, JavaScript, Bash/Shell, SQL</SkillRow>
+              <SkillRow label="ML / DL">PyTorch, TensorFlow/Keras, Scikit-learn, OpenCV, Hugging Face Transformers</SkillRow>
+              <SkillRow label="Computer Vision">Image Segmentation, Object Detection, GANs, Diffusion Models, Grad-CAM, YOLOv5</SkillRow>
+              <SkillRow label="NLP">BERT, Transformers, Sentiment Analysis, Topic Modeling, LLM Integration</SkillRow>
+              <SkillRow label="Cloud & DevOps">AWS (Lambda, API Gateway, S3, Cognito), Azure, Docker, Kubernetes, Jenkins, CI/CD</SkillRow>
+              <SkillRow label="Mobile & Frontend">React Native, Mapbox, REST APIs</SkillRow>
+              <SkillRow label="Tools">Git, Jira, Confluence, Linux, Jupyter Notebooks</SkillRow>
+            </div>
+          </section>
 
-            <article className="rounded-2xl border p-4">
-              <div className="flex items-center justify-between">
-                <h3 className="font-medium text-base">
-                  <a href="https://github.com/canrollas/mitochondria_segmentation_unet" target="_blank" className="text-blue-600 hover:underline">Mitochondria Segmentation</a>
-                </h3>
-                <span className="px-2 py-0.5 text-xs rounded-full bg-green-100 border text-green-700">Open-Source</span>
-              </div>
-              <p className="text-sm text-slate-700 mt-3">
-                U-Net-based deep learning pipeline for binary semantic segmentation of mitochondria in grayscale microscopy images. 
-                Achieved 99.4% validation accuracy.
-              </p>
-              <p className="text-xs text-slate-500 mt-2">U-Net, Semantic Segmentation, Deep Learning</p>
-            </article>
+        </main>
+      </div>
 
-            <article className="rounded-2xl border p-4">
-              <div className="flex items-center justify-between">
-                <h3 className="font-medium text-base">
-                  <a href="https://www.kitapquest.com" target="_blank" className="text-blue-600 hover:underline">KitapQuest</a>
-                </h3>
-                <span className="px-2 py-0.5 text-xs rounded-full bg-slate-100 border text-slate-600">Proprietary</span>
-              </div>
-              <p className="text-sm text-slate-700 mt-3">
-                Social reading platform with AI-driven book recommendations and community features. 
-                Map-inspired city walls and chatbot integration.
-              </p>
-              <p className="text-xs text-slate-500 mt-2">Web App, AI, Recommendation System</p>
-            </article>
+      <footer className="border-t border-slate-200 mt-4 py-6 text-center text-xs text-slate-400">
+        © {new Date().getFullYear()} Can Rollas
+      </footer>
+    </div>
+  );
+}
 
-            <article className="rounded-2xl border p-4">
-              <div className="flex items-center justify-between">
-                <h3 className="font-medium text-base">
-                  <a href="https://github.com/canrollas/HaberliyoTwitter" target="_blank" className="text-blue-600 hover:underline">HaberliyoTwitter</a>
-                </h3>
-                <span className="px-2 py-0.5 text-xs rounded-full bg-green-100 border text-green-700">Open-Source</span>
-              </div>
-              <p className="text-sm text-slate-700 mt-3">
-                Experimental Twitter bot and news-sharing platform that aggregates and posts real-time news headlines 
-                in a neutral and unbiased manner.
-              </p>
-              <p className="text-xs text-slate-500 mt-2">NLP, News Aggregation, Automation, Twitter API</p>
-            </article>
-          </div>
-        </section>
+function SectionTitle({ children }) {
+  return (
+    <div className="flex items-center gap-3">
+      <h2 className="text-base font-semibold font-[family-name:var(--font-lora)] whitespace-nowrap">{children}</h2>
+      <div className="h-px bg-slate-200 flex-1" />
+    </div>
+  );
+}
 
-        {/* Publications */}
-        <section id="publications" className="mt-6 bg-white rounded-3xl shadow-sm border border-slate-200 p-6">
-          <h2 className="text-xl font-semibold">Publications</h2>
-          <ol className="mt-4 space-y-3 text-sm text-slate-800 list-decimal list-inside">
-            <li>
-              Kersü A, <u>Rollas C</u>, Salman ZD, Salam A, Gumus A. <a href="https://github.com/miralab-ai/circuit-simulator" target="_blank" className="font-normal text-blue-600 hover:underline">Development of Open Source and Terminal Based Analog Circuit Simulator</a>. International Conference on Studies in Engineering, Science, and Technology, 2024.
-              <span className="ml-2 px-2 py-0.5 text-xs rounded-full bg-slate-100 border">Conference</span>
-            </li>
-          </ol>
-        </section>
+function ProjectRow({ title, tags, year, href, children }) {
+  return (
+    <div>
+      <div className="flex items-baseline justify-between gap-4 flex-wrap">
+        <div className="flex items-baseline gap-2 flex-wrap">
+          <a href={href} target="_blank" className="font-medium text-slate-800 hover:underline underline-offset-2">
+            {title}
+          </a>
+          <span className="text-xs text-slate-400 italic">{tags}</span>
+        </div>
+        {year && <span className="text-xs text-slate-400 whitespace-nowrap">{year}</span>}
+      </div>
+      <p className="mt-0.5 text-slate-500 text-xs leading-relaxed">{children}</p>
+    </div>
+  );
+}
 
-        {/* Skills */}
-        <section id="skills" className="mt-6 bg-white rounded-3xl shadow-sm border border-slate-200 p-6">
-          <h2 className="text-xl font-semibold">Skills</h2>
-
-          <div className="mt-3 text-sm">
-            <div className="font-medium">Areas</div>
-            <ul className="mt-1 text-slate-700 list-disc list-outside pl-4 flex flex-wrap gap-x-6 gap-y-1">
-              <li>Deep Learning</li>
-              <li>Computer Vision</li>
-              <li>Natural Language Processing</li>
-              <li>Machine Learning</li>
-              <li>AI & Computer Vision</li>
-              <li>Cross-platform Mobile Development</li>
-              <li>AWS Cloud Architecture</li>
-              <li>DevOps</li>
-              <li>Full-stack Development</li>
-              <li>Smart Agriculture</li>
-              <li>IoT Integration</li>
-              <li>Data Analytics</li>
-            </ul>
-
-            <div className="mt-4 font-medium">Technologies</div>
-            <ul className="mt-1 text-slate-700 list-disc list-outside pl-4 flex flex-wrap gap-x-6 gap-y-1">
-              <li>Python</li>
-              <li>React Native</li>
-              <li>JavaScript</li>
-              <li>AWS</li>
-              <li>Docker</li>
-              <li>Kubernetes</li>
-              <li>Git</li>
-              <li>Jenkins</li>
-              <li>Linux</li>
-              <li>TensorFlow</li>
-              <li>PyTorch</li>
-              <li>YOLO</li>
-              <li>BERT</li>
-              <li>U-Net</li>
-              <li>Mapbox</li>
-              <li>LLM</li>
-              <li>CI/CD</li>
-              <li>Atlassian Stack</li>
-            </ul>
-          </div>
-        </section>
-
-        {/* Contact */}
-        <section id="contact" className="mt-6 bg-white rounded-3xl shadow-sm border border-slate-200 p-6">
-          <h2 className="text-xl font-semibold">Contact</h2>
-          <div className="mt-2 text-sm text-slate-800">
-            <p><span className="font-medium">Email:</span> <a className="text-blue-600 hover:underline" href="mailto:canrollas@gmail.com">canrollas@gmail.com</a></p>
-            <p><span className="font-medium">GitHub:</span> <a className="text-blue-600 hover:underline" target="_blank" href="https://github.com/canrollas">@canrollas</a></p>
-            <p><span className="font-medium">Location:</span> İzmir, Turkey</p>
-          </div>
-        </section>
-
-        <footer className="mt-6 pb-12 text-center text-xs text-slate-500">
-          
-        <span>© {new Date().getFullYear()} RollasTech </span>
-
-        </footer>
-      </main>
-
-      <script>
-        document.getElementById('y').textContent = new Date().getFullYear();
-      </script>
+function SkillRow({ label, children }) {
+  return (
+    <div className="flex gap-2">
+      <span className="font-medium text-slate-700 whitespace-nowrap">{label}:</span>
+      <span className="text-slate-500">{children}</span>
     </div>
   );
 }
