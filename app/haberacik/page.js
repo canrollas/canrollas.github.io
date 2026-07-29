@@ -1,150 +1,79 @@
 import Image from "next/image";
 
-const featuredNews = {
-  category: "DÜNYA",
-  time: "şimdi",
-  title: "BM: Gazze'de yerinden edilmiş kişilerin yaşadığı yerlerin yüzde ...",
-  summary:
-    "BM, Gazze'de İsrail'in kısıtlamaları nedeniyle yerinden edilmiş kişilerin yaşadığı bölgeleri...",
-  source: "Kaynak: aa • Okuma Süresi: 1 dk",
-  image:
-    "https://images.unsplash.com/photo-1508179522353-11ba468c4a1c?auto=format&fit=crop&w=1600&q=80",
-};
+const appHeroImage =
+  "https://github.com/user-attachments/assets/e6f0c0c0-aea0-489a-9216-05613b7f5639";
+const storeBannerImage =
+  "https://github.com/user-attachments/assets/8573dbc4-3bbd-4211-b313-4ec07529d78b";
 
-const newsCards = [
-  {
-    agency: "aa",
-    category: "DİPLOMASİ",
-    time: "şimdi",
-    title: "Netanyahu ile Trump'ın İran'a karşı yeni açıklamaları...",
-    image:
-      "https://images.unsplash.com/photo-1575320181282-9afab399332c?auto=format&fit=crop&w=1000&q=80",
-  },
-  {
-    agency: "aa",
-    category: "DİPLOMASİ",
-    time: "şimdi",
-    title: "KKTC Dışişleri, Türkiye’nin Guterres görüşmesini değerlendirdi...",
-    image:
-      "https://images.unsplash.com/photo-1577495508326-19a1b3cf65b7?auto=format&fit=crop&w=1000&q=80",
-  },
-  {
-    agency: "aa",
-    category: "SPOR",
-    time: "şimdi",
-    title: "Adalet Bakanı Gürlek'ten spor gündemine ilişkin açıklama...",
-    image:
-      "https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=1000&q=80",
-  },
-  {
-    agency: "aa",
-    category: "DİPLOMASİ",
-    time: "şimdi",
-    title: "TCMB ile Suriye Merkez Bankası arasında temaslar başladı...",
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1000&q=80",
-  },
+const features = [
+  "Çok fazla kaynağı sürekli tarar: Ulusal gazetelerden yerel sitelere, ekonomi portallarından teknoloji yayınlarına kadar geniş bir kaynak havuzunu dakikalar içinde tarayarak gündemi anlık takip eder.",
+  "Aynı haberi 30 kez okutmaz: Yapay zekâ destekli kümeleme sistemi, farklı sitelerde farklı başlıklarla yayınlanan aynı haberi tek bir başlık altında toplar.",
+  "Önemliyi önemsizden ayırır: Büyük dil modelleri, gündem değeri taşıyan haberleri seçer ve yalnızca bilmeye değer olanı gösterir.",
+  "Kritik gelişmeleri anında bildirir: Gündemi değiştiren bir haber çıktığında, bildirim bombardımanı olmadan haberdar eder.",
 ];
-
-function Header() {
-  return (
-    <header className="sticky top-0 z-20 border-b border-slate-200 bg-white/95 backdrop-blur">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 sm:px-6">
-        <div className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-b from-blue-500 to-blue-700 text-2xl text-white shadow-sm">
-            🔒
-          </div>
-          <div className="text-4xl leading-none text-slate-800 font-[family-name:var(--font-lora)]">
-            Haber<span className="text-blue-700">Açık</span>
-          </div>
-        </div>
-        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-slate-100 text-2xl text-slate-600">
-          ⚙️
-        </div>
-      </div>
-    </header>
-  );
-}
-
-function FeaturedCard() {
-  return (
-    <article className="relative overflow-hidden rounded-3xl shadow-lg">
-      <Image src={featuredNews.image} alt={featuredNews.title} width={1600} height={1000} className="h-[28rem] w-full object-cover" />
-      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/20" />
-      <div className="absolute inset-x-0 bottom-0 p-6 text-white">
-        <div className="mb-4 flex items-center gap-3 text-lg">
-          <span className="rounded-full bg-blue-700 px-4 py-1.5 font-semibold">{featuredNews.category}</span>
-          <span className="text-slate-100">{featuredNews.time}</span>
-        </div>
-        <h1 className="text-4xl font-semibold leading-tight font-[family-name:var(--font-lora)]">{featuredNews.title}</h1>
-        <p className="mt-3 text-2xl text-slate-200">{featuredNews.summary}</p>
-        <p className="mt-4 text-lg text-slate-300">{featuredNews.source}</p>
-      </div>
-    </article>
-  );
-}
-
-function NewsGridCard({ item }) {
-  return (
-    <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-      <div className="relative">
-        <Image src={item.image} alt={item.title} width={1000} height={600} className="h-48 w-full object-cover" />
-        <span className="absolute left-3 top-3 rounded-full bg-black/60 px-3 py-1 text-3xl font-semibold text-white">
-          {item.agency}
-        </span>
-      </div>
-      <div className="p-4">
-        <div className="mb-2 flex items-center justify-between">
-          <span className="text-2xl font-semibold text-blue-700">{item.category}</span>
-          <span className="text-2xl text-slate-600">{item.time}</span>
-        </div>
-        <p className="line-clamp-2 text-3xl leading-snug text-slate-800 font-[family-name:var(--font-lora)]">{item.title}</p>
-      </div>
-    </article>
-  );
-}
-
-function BottomNav() {
-  const items = [
-    { label: "Akış", icon: "🏠", active: true },
-    { label: "Keşfet", icon: "🧭" },
-    { label: "Gazeteler", icon: "🗞️" },
-    { label: "Ayarlar", icon: "⚙️" },
-  ];
-
-  return (
-    <nav className="sticky bottom-0 z-20 mt-10 border-t border-slate-200 bg-white">
-      <div className="mx-auto grid max-w-5xl grid-cols-4 px-2 py-3">
-        {items.map((item) => (
-          <div key={item.label} className="flex flex-col items-center gap-1">
-            <div
-              className={`flex h-12 w-12 items-center justify-center rounded-full text-xl ${
-                item.active ? "bg-blue-600 text-white" : "bg-slate-100 text-slate-500"
-              }`}
-            >
-              {item.icon}
-            </div>
-            <span className={`text-sm ${item.active ? "text-blue-700" : "text-slate-600"}`}>{item.label}</span>
-          </div>
-        ))}
-      </div>
-    </nav>
-  );
-}
 
 export default function HaberAcikPage() {
   return (
-    <div className="min-h-screen bg-[#f4f6ff] text-slate-900">
-      <Header />
-      <main className="mx-auto max-w-5xl px-4 py-5 sm:px-6">
-        <FeaturedCard />
-        <section className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {newsCards.map((item) => (
-            <NewsGridCard key={item.title} item={item} />
-          ))}
+    <main className="min-h-screen bg-slate-50 px-4 py-12 text-slate-900 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-4xl space-y-10">
+        <section className="space-y-5 text-center">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-blue-700">Haber Açık</p>
+          <h1 className="text-3xl font-semibold leading-tight sm:text-4xl">
+            Gündemi Senin Yerine Okuyan Haber Uygulaması
+          </h1>
+          <p className="text-base leading-relaxed text-slate-700 sm:text-lg">
+            Her sabah onlarca haber sitesi, yüzlerce başlık, birbirinin kopyası içerikler... Gündemi takip
+            etmek neredeyse yarı zamanlı bir işe dönüştü. Haber Açık, Türkiye&apos;nin dört bir yanındaki haber
+            kaynaklarını sizin yerinize tarar, önemli olanı ayıklar ve size sade, hızlı, reklamsız bir akış
+            sunar.
+          </p>
         </section>
-      </main>
-      <BottomNav />
-    </div>
+
+        <section className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+          <Image
+            src={appHeroImage}
+            alt="Haber Açık uygulama ikonu"
+            width={512}
+            height={512}
+            className="h-auto w-full"
+          />
+        </section>
+
+        <section className="space-y-5 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+          <h2 className="text-2xl font-semibold">Ne Yapıyor?</h2>
+          <ul className="space-y-4 text-slate-700">
+            {features.map((feature) => (
+              <li key={feature} className="leading-relaxed">
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="space-y-4 rounded-3xl border border-blue-100 bg-blue-50 p-6 shadow-sm sm:p-8">
+          <h2 className="text-2xl font-semibold text-blue-900">Neden Haber Açık?</h2>
+          <p className="leading-relaxed text-blue-900/90">
+            Çünkü haber okumak yorucu olmamalı. Haber Açık&apos;ın arkasında, haberleri anlam düzeyinde
+            karşılaştıran gömme (embedding) teknolojisi ve modern bir yapay zekâ hattı çalışır; önünüzde ise
+            sadece temiz, hızlı ve dikkat dağıtmayan bir arayüz vardır.
+          </p>
+          <p className="font-medium text-blue-900">Gündem karışık olabilir — ama artık haberiniz açık.</p>
+        </section>
+
+        <section className="space-y-4 text-center">
+          <p className="text-lg font-semibold">Haber Açık&apos;ı indirin, gündemi sizin yerinize okusun.</p>
+          <p className="text-slate-600">Yakında App Store ve Play Store&apos;da.</p>
+          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+            <Image
+              src={storeBannerImage}
+              alt="Haber Açık mağaza görseli"
+              width={1200}
+              height={630}
+              className="h-auto w-full"
+            />
+          </div>
+        </section>
+      </div>
+    </main>
   );
 }
