@@ -114,8 +114,6 @@ export default function Home() {
                   <div className="text-slate-600 italic">Computer Vision Research Group (CVRG), IZTECH</div>
                   <ul className="mt-1 list-disc list-inside text-slate-500 space-y-0.5 pl-1">
                     <li>Designed and conducted a systematic wound tissue segmentation benchmark (37 encoder–decoder configurations) forming the basis of an under-review publication.</li>
-                    <li>Developed CPAN, a color-prior aware segmentation network injecting LAB/HSV priors as decoder gating on a MiT-B2 backbone, improving mIoU by +0.95 pp over SegFormer baseline.</li>
-                    <li>Built <a href="https://github.com/canrollas/SoreSAM" target="_blank" rel="noreferrer" className="underline underline-offset-2">SoreSAM</a>, a multi-stage wound analysis pipeline combining deep localization with classical color-space tissue classification.</li>
                   </ul>
                 </div>
                 <div className="text-slate-400 whitespace-nowrap text-right">Jul. 2024 – Present<br /><span className="text-xs">İzmir, Türkiye</span></div>
