@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const featuredNews = {
   category: "DÜNYA",
   time: "şimdi",
@@ -67,7 +69,7 @@ function Header() {
 function FeaturedCard() {
   return (
     <article className="relative overflow-hidden rounded-3xl shadow-lg">
-      <img src={featuredNews.image} alt={featuredNews.title} className="h-[28rem] w-full object-cover" />
+      <Image src={featuredNews.image} alt={featuredNews.title} width={1600} height={1000} className="h-[28rem] w-full object-cover" />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/20" />
       <div className="absolute inset-x-0 bottom-0 p-6 text-white">
         <div className="mb-4 flex items-center gap-3 text-lg">
@@ -86,7 +88,7 @@ function NewsGridCard({ item }) {
   return (
     <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
       <div className="relative">
-        <img src={item.image} alt={item.title} className="h-48 w-full object-cover" />
+        <Image src={item.image} alt={item.title} width={1000} height={600} className="h-48 w-full object-cover" />
         <span className="absolute left-3 top-3 rounded-full bg-black/60 px-3 py-1 text-3xl font-semibold text-white">
           {item.agency}
         </span>
