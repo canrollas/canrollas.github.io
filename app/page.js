@@ -16,7 +16,6 @@ export default function Home() {
             Izmir Institute of Technology (IZTECH) &nbsp;|&nbsp; İzmir, Türkiye
           </p>
           <div className="mt-3 flex flex-wrap gap-4 text-sm">
-            <span className="text-slate-600">(+90) 501 145 9499</span>
             <a href="mailto:canrollas@gmail.com" className="text-slate-600 hover:text-slate-900 underline underline-offset-2">
               canrollas@gmail.com
             </a>
