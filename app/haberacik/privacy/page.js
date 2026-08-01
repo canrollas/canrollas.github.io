@@ -78,8 +78,11 @@ export default function HaberAcikPrivacyPage() {
           </PolicySection>
 
           <PolicySection title="11. İletişim">
-            Gizlilik politikasıyla ilgili sorularınız için uygulama yayın sayfalarında veya resmi iletişim kanallarında
-            belirtilen yöntemlerle bizimle iletişime geçebilirsiniz.
+            Gizlilik politikasıyla veya uygulamayla ilgili sorularınız için{" "}
+            <a href="mailto:canrollas@gmail.com" className="font-medium text-blue-700 underline underline-offset-2">
+              canrollas@gmail.com
+            </a>{" "}
+            adresinden bizimle iletişime geçebilirsiniz.
           </PolicySection>
         </section>
       </div>

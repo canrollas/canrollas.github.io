@@ -73,6 +73,22 @@ export default function HaberAcikPage() {
             />
           </div>
         </section>
+
+        <section className="space-y-3 rounded-3xl border border-slate-200 bg-white p-6 text-center shadow-sm sm:p-8">
+          <h2 className="text-2xl font-semibold">Bize Ulaşın</h2>
+          <p className="leading-relaxed text-slate-700">
+            Uygulama veya geliştiricisiyle ilgili sorularınız, geri bildirimleriniz ya da içerik talepleriniz için
+            bize e-posta ile ulaşabilirsiniz.
+          </p>
+          <p>
+            <a
+              href="mailto:canrollas@gmail.com"
+              className="font-medium text-blue-700 underline underline-offset-2"
+            >
+              canrollas@gmail.com
+            </a>
+          </p>
+        </section>
       </div>
     </main>
   );
