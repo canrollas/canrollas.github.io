@@ -25,8 +25,34 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-    title: "Can Rollas — ML Engineer & Computer Vision Researcher",
-    description: "Academic page of Can Rollas. Machine Learning Engineer at Amatis, MSc researcher at IZTECH. Research: Medical Image Synthesis, Diffusion Models, Computer Vision.",
+    metadataBase: new URL("https://canrollas.github.io"),
+    title: "Can Rollas CV & Portfolio | ML Engineer & Computer Vision Researcher",
+    description: "Can Rollas'ın CV ve portfolyo sayfası. Machine Learning Engineer, Computer Vision araştırmacısı, projeler, yayınlar ve deneyim.",
+    keywords: [
+        "Can Rollas",
+        "Can Rollas CV",
+        "Can Rollas portfolio",
+        "ML Engineer",
+        "Computer Vision",
+        "İzmir Institute of Technology",
+        "Yapay zeka portfolyo",
+    ],
+    alternates: {
+        canonical: "/",
+    },
+    openGraph: {
+        title: "Can Rollas CV & Portfolio",
+        description: "Can Rollas'ın CV, portfolyo, araştırma ve proje sayfası.",
+        url: "https://canrollas.github.io",
+        siteName: "Can Rollas Portfolio",
+        locale: "tr_TR",
+        type: "website",
+    },
+    twitter: {
+        card: "summary",
+        title: "Can Rollas CV & Portfolio",
+        description: "Can Rollas'ın CV ve portfolyo sayfası.",
+    },
 };
 
 export default function RootLayout({ children }) {
