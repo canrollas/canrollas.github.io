@@ -9,7 +9,7 @@ export default function Home() {
           <h1 className="text-4xl font-semibold tracking-tight font-[family-name:var(--font-lora)]">
             Can Rollas
           </h1>
-          <p className="mt-1 text-base text-slate-600">
+          <p className="mt-1 text-base text-slate-600 ">
             M.Sc. Researcher, Computer Vision
           </p>
           <p className="mt-0.5 text-sm text-slate-500">
