@@ -12,7 +12,7 @@ export default function Home() {
           <p className="mt-1 text-base text-slate-600 ">
             M.Sc. Researcher, Computer Vision
           </p>
-          <p className="mt-0.5 text-sm text-slate-500">
+          <p className="mt-0.5  text-sm text-slate-500">
             Izmir Institute of Technology (IZTECH) &nbsp;|&nbsp; İzmir, Türkiye
           </p>
           <div className="mt-3 flex flex-wrap gap-4 text-sm">
